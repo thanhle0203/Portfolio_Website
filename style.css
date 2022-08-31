@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.ctfassets.net/pdf29us7flmy/4SdoUEI5wZ6l8wWkzhswhG/6bbf5bb41f48569d5d2f9052aed695da/GettyImages-689291632_optimized.jpg?w=720&q=100&fm=jpg);
+    background-size: cover;
+    background-position: center;
+}
+
