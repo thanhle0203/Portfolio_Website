@@ -13,7 +13,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCjA_9fwPTSkJof3Aq4WgQIcxWOGscQ3FCuLsiGqMyZDTDt6YjDc4CcSCGtCWMAdAVkg&usqp=CAU);
+    background-image: url(https://img.wallpapersafari.com/desktop/728/410/39/33/qIosZM.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -73,4 +73,37 @@ nav ul li a:hover::after {
 .header-text h1 span {
     color: #ff004f;
 }
+
+/* -----------about------------- */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
 
