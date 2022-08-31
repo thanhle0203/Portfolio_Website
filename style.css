@@ -13,7 +13,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(https://images.ctfassets.net/pdf29us7flmy/4SdoUEI5wZ6l8wWkzhswhG/6bbf5bb41f48569d5d2f9052aed695da/GettyImages-689291632_optimized.jpg?w=720&q=100&fm=jpg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCjA_9fwPTSkJof3Aq4WgQIcxWOGscQ3FCuLsiGqMyZDTDt6YjDc4CcSCGtCWMAdAVkg&usqp=CAU);
     background-size: cover;
     background-position: center;
 }
@@ -57,6 +57,20 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
+    width: 100%;
+}
 
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
 }
 
