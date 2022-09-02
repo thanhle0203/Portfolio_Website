@@ -275,14 +275,15 @@ nav ul li a:hover::after {
     border: 1px solid red;
     padding: 14px 50px;
     border-radius: 6px;
-    background: #fff;
+    background: #ff004f;
     text-decoration: none;
     transition: background 0.5s;
+    color: #fff;
 }
 
 .btn:hover {
-    background: #ff004f;
-    color: white;
+    background: white;
+    color: black;
 }
 
 /* ---------------contact------------------*/
@@ -324,8 +325,8 @@ nav ul li a:hover::after {
 
 .btn.btn2 {
     display: inline-block;
-    background: white;
-    color: black;
+    background: #ff004f;
+    color: white;
 }
 
 .contact-right form {
@@ -349,4 +350,17 @@ form btn2 {
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.contact-right i {
+    color: #ff004f;
 }
