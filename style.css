@@ -239,6 +239,7 @@ nav ul li a:hover::after {
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
+    transition: height 0.5s;
 }
 
 .layer h3 {
@@ -261,4 +262,8 @@ nav ul li a:hover::after {
 
 .work:hover img {
     transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
 }
