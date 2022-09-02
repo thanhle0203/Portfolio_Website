@@ -204,7 +204,7 @@ nav ul li a:hover::after {
 /* ---------portfolio-------------*/>
 #portfolio {
     padding: 50px 0;
-    margin-bottom: 60px;
+    margin-bottom: 200px;
 }
 
 .work-list {
@@ -293,14 +293,16 @@ nav ul li a:hover::after {
 }
 
 /* ---------------contact------------------*/
+#contact {
+    margin-top: 100px;
+}
 .contact-left {
     flex-basis: 35%;
-    margin-top: 100px;
 }
 
 .contact-right {
     flex-basis: 60%;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .contact-left p {
@@ -367,7 +369,7 @@ form btn2 {
     padding: 25px 0;
     background: #262626;
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 .contact-right i {
@@ -446,4 +448,10 @@ nav .fa-solid {
     }
 
     
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }
