@@ -179,9 +179,9 @@
                     <a href="images/Le_Thanh_Résumé.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
@@ -219,8 +219,19 @@
         function closemenu(){
             sidemenu.style.right = "-200px";
         }
-
-
     </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwDpvv-1N7FSy62Mu4QORP2mUBkGPS5mqkgM90Dr5X6h0MBwkDfZGbw9PjC8E7vPwuUAw/exec'
+        const form = document.forms['submit-to-google-sheet']
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
 </body>
 </html>
