@@ -456,3 +456,22 @@ nav .fa-solid {
     margin-top: -40px;
     display: block;
 }
+
+.image-gallery {
+    display: flex;
+    overflow: hidden;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:not(:first-child) {
+    margin-left: -100%;
+}
+
+.image-gallery.active img {
+    transform: translateX(-100%);
+}
