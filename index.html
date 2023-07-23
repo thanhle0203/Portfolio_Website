@@ -7,6 +7,8 @@
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3bb6c0b931.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/3bb6c0b931.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -104,8 +106,10 @@
                 <h2>E-commerce Web Application</h2>
                 <br>
                 <div class="image-gallery">
-                    <img src="images/ecommerce-homepage1.png" alt="">
+                    <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
+                    <img src="images/ecommerce-homepage1.png" alt="" class="default-image">
                     <img src="images/ecommerce-homepage2.png" alt="">
+                    <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
                 </div>
                 
                 <div class="layer">
@@ -125,8 +129,10 @@
                 <h2>Auto Insurance Microservice</h2>
                 <br>
                 <div class="image-gallery">
-                    <img src="images/homepage.PNG" alt="">
+                    <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
+                    <img src="images/homepage.PNG" alt="" class="default-image">
                     <img src="images/autoInsurancePlans.PNG" alt="">
+                    <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
                 </div>
                 
                 <!-- <img src="images/manageInsurance1.PNG" alt="">
@@ -152,8 +158,10 @@
                 <h2>Travel Gig Microservice </h2>
                 <br>
                 <div class="image-gallery">
-                    <img src="images/homepage1.PNG" alt="">
+                    <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
+                    <img src="images/homepage1.PNG" alt="" class="default-image">
                     <img src="images/homepage2.PNG" alt="">
+                    <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
                 </div>
                 
                 <div class="layer">
@@ -312,25 +320,28 @@
         })
     </script>
 
-    <script>
-        const galleries = document.querySelectorAll('.image-gallery');
-
-        galleries.forEach(gallery => {
-            const images = gallery.querySelectorAll('img');
-            let currentIndex = 0;
-
-            function showImage(index) {
-                images.forEach((img, i) => {
-                    img.style.transform `translateX(-${100 * (i - index)}%)`;
-                });
-            }
-
-            gallery.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % images.length;
-                showImage(currentIndex);
-            })
-        })
-    </script>
+<script>
+    const gallery = document.querySelector('.image-gallery');
+    const images = gallery.querySelectorAll('img');
+    let currentIndex = 0;
+  
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.style.transform = `translateX(-${100 * (i - index)}%)`;
+      });
+    }
+  
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+  
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+  </script>
+  
 
 </body>
 </html>

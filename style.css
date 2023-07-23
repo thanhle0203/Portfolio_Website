@@ -458,8 +458,10 @@ nav .fa-solid {
 }
 
 .image-gallery {
+    position: relative;
     display: flex;
     overflow: hidden;
+    align-items: center;
 }
 
 .image-gallery img {
@@ -472,6 +474,27 @@ nav .fa-solid {
     margin-left: -100%;
 }
 
-.image-gallery.active img {
-    transform: translateX(-100%);
+.image-gallery .default-image {
+    opacity: 1;
+    z-index: 1;
+}
+
+.image-gallery {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.image-gallery .fa-chevron-left {
+    left: 10px;
+}
+
+.image-gallery .fa-chevron-right {
+    right: 10px;
 }
