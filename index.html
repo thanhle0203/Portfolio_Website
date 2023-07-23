@@ -50,14 +50,14 @@
                         <p class="tab-links" onclick="opentab('skills')">Skills</p>  
                     </div>
 
-                    <div class="tab-contents" id="education">
+                    <div class="tab-contents active-tab" id="education">
                         <ul>
                             <li><span>2018 - 2022</span><br>BS. Computer Science - San Jose State University</li>
                             <li><span>2023 - Current</span><br>Java Training - SynergisticIT</li>
                         </ul>
                     </div>
 
-                    <div class="tab-contents active-tab" id="experience">
+                    <div class="tab-contents" id="experience">
                         <ul>
                             <li><br><span>E-commerce Web Application</span><br></li>
                             <li><br><span>Auto Insurance Microservice</span><br></li>
@@ -105,12 +105,12 @@
             <div class="work">
                 <h2>E-commerce Web Application</h2>
                 <br>
-                <div class="image-gallery">
+                <!-- <div class="image-gallery"> -->
                     <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
                     <img src="images/ecommerce-homepage1.png" alt="" class="default-image">
                     <img src="images/ecommerce-homepage2.png" alt="">
                     <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
-                </div>
+                <!-- </div> -->
                 
                 <div class="layer">
                     <h3>E-commerce Web Application</h3>
@@ -128,12 +128,12 @@
             <div class="work">
                 <h2>Auto Insurance Microservice</h2>
                 <br>
-                <div class="image-gallery">
+                <!-- <div class="image-gallery"> -->
                     <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
                     <img src="images/homepage.PNG" alt="" class="default-image">
                     <img src="images/autoInsurancePlans.PNG" alt="">
                     <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
-                </div>
+                <!-- </div> -->
                 
                 <!-- <img src="images/manageInsurance1.PNG" alt="">
                 <img src="images/ManageInsurance2.PNG" alt="">
@@ -323,7 +323,7 @@
 <script>
     const gallery = document.querySelector('.image-gallery');
     const images = gallery.querySelectorAll('img');
-    let currentIndex = 1; // Start from the second image (skip the default image)
+    let currentIndex = 0; // Start from the first image (index 0)
   
     function showImage(index) {
       images.forEach((img, i) => {
@@ -343,7 +343,17 @@
   
     // Call showImage to hide the default image and show the first actual image.
     showImage(currentIndex);
+  
+    const defaultImage = gallery.querySelector('.default-image');
+  
+    if (defaultImage) {
+      defaultImage.addEventListener('click', () => {
+        currentIndex = 0;
+        showImage(currentIndex);
+      });
+    }
   </script>
+  
   
   
 
