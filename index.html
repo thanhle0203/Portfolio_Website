@@ -323,7 +323,7 @@
 <script>
     const gallery = document.querySelector('.image-gallery');
     const images = gallery.querySelectorAll('img');
-    let currentIndex = 0;
+    let currentIndex = 1; // Start from the second image (skip the default image)
   
     function showImage(index) {
       images.forEach((img, i) => {
@@ -340,7 +340,11 @@
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       showImage(currentIndex);
     }
+  
+    // Call showImage to hide the default image and show the first actual image.
+    showImage(currentIndex);
   </script>
+  
   
 
 </body>
